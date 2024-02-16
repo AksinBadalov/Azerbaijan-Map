@@ -1,0 +1,66 @@
+* {
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+  }
+  
+  body {
+    background-color: teal;
+  }
+  
+  .map {
+    width: max-content;
+    margin: 20px auto;
+    transform: rotate(-5deg);
+  }
+  
+  path:hover {
+    /* background-color: red; */
+    fill:red;
+    cursor: pointer;
+  }
+  
+  #regions {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;
+  }
+  
+  #regions li {
+    padding: 5px 5px;
+    background-color: #fff;
+    text-align: center;
+    cursor: pointer;
+  }
+  .active{
+    fill: red;
+  }
+  .active_btn{
+    background-color: greenyellow !important;
+  }
+  .tooltip{
+    position: absolute;
+    background-color:#fff;
+    display: inline-block;
+    padding: 5px 10px;
+    z-index: 2;
+    transform:translate(-50%,-50%);
+    top: 0;
+    left: 0;
+    transition: 0.4s;
+  }
+  .tooltip::before{
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: inherit;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform:translate(-50%,-50%) rotate(45deg);
+    z-index: 0;
+  }
